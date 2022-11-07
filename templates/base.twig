@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+                    <li><a href="/form" class="nav-link px-2">Форма добавления</a></li>
+                    <li><a href="/list" class="nav-link px-2">Список сотрудников</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="row my-auto">
+        <div class="col-md-8 mx-auto">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

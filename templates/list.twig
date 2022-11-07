@@ -1,0 +1,17 @@
+
+{% extends 'base.twig' %}
+
+{% block title %}Список сотрудников{% endblock %}
+
+{% block body  %}
+    {{ form(form) }}
+
+    <h1 class="mb-5">Список сотрудников</h1>
+    {% for employee in employees %}
+        <div class="d-flex align-items-center justify-content-between">
+            <h5><span class="text-primary">{{ employee.path }}</span></h5>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
