@@ -29,10 +29,6 @@ class Employee
      */
     private ?int $parentId;
 
-
-    /**
-     * @ORM\Column(type="string")
-     */
     private ?string $path;
 
 
